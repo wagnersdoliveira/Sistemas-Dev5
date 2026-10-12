@@ -1,0 +1,6 @@
+{
+  "name": "Orçamento Familiar",
+  "description": "Controle financeiro e orçamento familiar, extratos bancários integrados do Nubank e Banco Neon, controle de entradas, dívidas e categorias de despesas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
