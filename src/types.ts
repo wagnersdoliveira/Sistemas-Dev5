@@ -23,6 +23,10 @@ export interface BankAccount {
   connected: boolean;
   lastSyncAt: string | null;
   bankBrandColor: string;
+  syncMode?: 'automatic_app' | 'open_finance' | 'manual';
+  autoSyncActive?: boolean;
+  appAuthStatus?: 'autenticado' | 'aguardando_app' | 'desconectado';
+  connectionMethod?: 'app_qrcode' | 'app_push' | 'open_finance';
 }
 
 export interface Transaction {

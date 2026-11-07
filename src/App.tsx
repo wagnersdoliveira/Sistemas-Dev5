@@ -73,6 +73,14 @@ export default function App() {
     showNotification('Sessão encerrada com sucesso.');
   };
 
+  const handleUpdateAccount = (updatedAccount: BankAccount) => {
+    setAccounts((prev) => {
+      const updated = prev.map(a => a.id === updatedAccount.id ? updatedAccount : a);
+      saveStoredAccounts(updated);
+      return updated;
+    });
+  };
+
   // Month navigation
   const handleChangeMonth = (delta: number) => {
     setCurrentDate((prev) => {
@@ -351,6 +359,7 @@ export default function App() {
             onSyncBank={handleSyncBank}
             syncingBank={syncingBank}
             onImportTransactions={handleImportTransactions}
+            onUpdateAccount={handleUpdateAccount}
           />
         )}
 
